@@ -1,0 +1,29 @@
+{
+  "name": "spur-chat-agent",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI Live Chat Agent — Spur Founding Full-Stack Engineer Take-Home",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "npm run dev --workspace=@spur/backend",
+    "dev:frontend": "npm run dev --workspace=@spur/frontend",
+    "build": "npm run build --workspaces",
+    "db:migrate": "npm run db:migrate --workspace=@spur/backend",
+    "db:seed": "npm run db:seed --workspace=@spur/backend",
+    "db:reset": "npm run db:reset --workspace=@spur/backend",
+    "docker:up": "docker compose up -d",
+    "docker:down": "docker compose down",
+    "lint": "npm run lint --workspaces",
+    "typecheck": "npm run typecheck --workspaces"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "typescript": "^5.7.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
