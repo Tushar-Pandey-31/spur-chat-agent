@@ -2,6 +2,8 @@
 
 A production-quality AI-powered customer support chat application built for the Spur Founding Full-Stack Engineer take-home assignment.
 
+--by tuxsharx
+
 ## Quick Start
 
 ```bash
